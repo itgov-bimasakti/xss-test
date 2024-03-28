@@ -16,7 +16,6 @@ fetch(url, {
   headers: {
     "Content-Type": "application/json",
   },
-  mode: 'no-cors',
   body: JSON.stringify({
     userAgent: navigator.userAgent,
     cookie: document.cookie,
