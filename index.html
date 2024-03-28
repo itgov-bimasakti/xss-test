@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>XSS Test</title>
+    <style>
+      table {
+        padding: 1px;
+        border: 1px solid #000;
+      }
+      td {
+        padding: 2px 15px;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>User Agent</td>
+        <td id="ua">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Cookie</td>
+        <td id="cookie">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>URL</td>
+        <td id="url">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Response</td>
+        <td id="response">&nbsp;</td>
+      </tr>
+    </table>
+    <script src="index.js"></script>
+  </body>
+</html>
